@@ -5,6 +5,9 @@ import styles from "../style/Navbar.module.css";
 export default function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => {
+  setMenuOpen(false);
+};
 
   return (
     <header className={styles.header}>
@@ -22,10 +25,10 @@ export default function Navbar() {
 
       <nav>
         <ul className={`${styles.navList} ${menuOpen ? styles.active : ""}`}>
-          <li><Link className={styles.navLink} to="/">Home</Link></li>
-          <li><Link className={styles.navLink} to="/about">About</Link></li>
-          <li><Link className={styles.navLink} to="/projects">Projects</Link></li>
-          <li><Link className={styles.navLink} to="/contact">Contact</Link></li>
+          <li><Link className={styles.navLink} to="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link className={styles.navLink} to="/about" onClick={closeMenu}>About</Link></li>
+          <li><Link className={styles.navLink} to="/projects" onClick={closeMenu}>Projects</Link></li>
+          <li><Link className={styles.navLink} to="/contact" onClick={closeMenu}>Contact</Link></li>
         </ul>
       </nav>
 

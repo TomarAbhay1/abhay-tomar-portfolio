@@ -1,0 +1,40 @@
+.ContentDiv{
+    width: 90%;
+    background-color: #374151;
+    border-radius: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    color: #ffffff;
+    font-size:2.5rem;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 80%;
+  margin: auto;
+}
+.card {
+  background-color: rgb(207, 108, 108);
+  padding: 1.7rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.btnContainer button {
+  padding: .7rem 1rem;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: .7rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+} 
+button:hover {
+  transform: scale(1.05);
+}
